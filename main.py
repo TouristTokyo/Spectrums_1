@@ -132,6 +132,7 @@ def draw_spectrum_digital_graphics(f):
     signal = get_digital_signal(f[0], time)
     yf = rfft(signal)
     xf = rfftfreq(len(time), 1 / len(time))
+    yf[0] = 0
     plt.plot(xf, np.abs(yf))
     plt.title(f"f = {f[0]}")
 
@@ -140,6 +141,7 @@ def draw_spectrum_digital_graphics(f):
     signal = get_digital_signal(f[1], time)
     yf = rfft(signal)
     xf = rfftfreq(len(time), 1 / len(time))
+    yf[0] = 0
     plt.plot(xf, np.abs(yf))
     plt.title(f"f = {f[1]}")
 
@@ -148,6 +150,7 @@ def draw_spectrum_digital_graphics(f):
     signal = get_digital_signal(f[2], time)
     yf = rfft(signal)
     xf = rfftfreq(len(time), 1 / len(time))
+    yf[0] = 0
     plt.plot(xf, np.abs(yf))
     plt.title(f"f = {f[2]}")
 
@@ -156,6 +159,7 @@ def draw_spectrum_digital_graphics(f):
     signal = get_digital_signal(f[3], time)
     yf = rfft(signal)
     xf = rfftfreq(len(time), 1 / len(time))
+    yf[0] = 0
     plt.plot(xf, np.abs(yf))
     plt.title(f"f = {f[3]}")
 
